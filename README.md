@@ -20,11 +20,13 @@ Gomed-website/
 
 ## Before you deploy — checklist
 
-### 1. Buy a domain & update placeholder URLs
-The code currently uses `https://www.Gomedconsultants.com` as a placeholder. Once you have a real domain, replace it in:
-- `index.html` — `<link rel="canonical">`, all `og:*` / `twitter:*` meta tags, the JSON-LD block
-- `robots.txt` — the `Sitemap:` line
-- `sitemap.xml` — the `<loc>` value
+### 1. Domain ✅
+Live domain: `gomedconsultancy.in` (purchased via GoDaddy). All canonical URLs, Open Graph/Twitter meta tags, JSON-LD, `robots.txt` and `sitemap.xml` now point at `https://www.gomedconsultancy.in`.
+
+To go live, point the domain at your hosting provider:
+- **If using Netlify/Vercel/Cloudflare Pages**: add `gomedconsultancy.in` and `www.gomedconsultancy.in` as custom domains in that provider's dashboard, then update the GoDaddy DNS records (usually an `A`/`ALIAS` record for the root domain and a `CNAME` for `www`) with the values the provider gives you.
+- **If using GoDaddy's own hosting**: upload this folder via GoDaddy's file manager/FTP.
+- DNS changes can take up to 24–48 hours to propagate.
 
 ### 2. Wire up the contact form (EmailJS)
 The forms currently show a fake success message until configured. To make them actually deliver enquiries to your inbox:
