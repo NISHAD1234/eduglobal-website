@@ -37,6 +37,11 @@ h1,h2,h3,h4{color:var(--navy);line-height:1.25;}
 .btn-outline:hover{background:var(--blue);color:#fff;}
 .btn-block{width:100%;}
 
+/* TOPBAR */
+.topbar{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 55%,var(--blue));display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;padding:9px 24px;}
+.topbar a{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#fff;padding:6px 16px;border-radius:999px;font-size:13px;font-weight:600;transition:.2s ease;}
+.topbar a:hover{background:rgba(255,255,255,.24);border-color:rgba(255,255,255,.4);}
+
 /* NAV */
 header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(15,42,74,.08);}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1180px;margin:0 auto;}
@@ -216,10 +221,35 @@ footer a{color:#c7d2e3;font-weight:600;}
 .info-list li::before{content:"•";position:absolute;left:4px;color:var(--blue);font-weight:800;}
 .info-list.two-col{display:grid;grid-template-columns:1fr 1fr;gap:2px 24px;}
 .info-note{background:#fffbeb;border:1px solid #fde68a;color:#92400e;font-size:13.5px;padding:12px 14px;border-radius:8px;margin-top:12px;}
-.table-wrap{overflow-x:auto;}
+.table-wrap{overflow-x:auto;border-radius:8px;border:1px solid #eef2f7;}
 .info-table{width:100%;border-collapse:collapse;font-size:14px;min-width:480px;}
-.info-table th,.info-table td{text-align:left;padding:10px 14px;border-bottom:1px solid #eef2f7;}
-.info-table th{background:var(--gray-100);color:var(--navy);font-weight:700;}
+.info-table th,.info-table td{text-align:left;padding:11px 14px;border-bottom:1px solid #eef2f7;}
+.info-table th{background:var(--gray-100);color:var(--navy);font-weight:700;font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0;}
+.info-table tbody tr:nth-child(even){background:var(--gray-50);}
+.info-table tbody tr:hover{background:#eef4ff;}
+.info-table tbody tr:last-child td{border-bottom:none;}
+
+/* ranked college list */
+.rank-list{padding-left:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;}
+.rank-list li{list-style:none;display:flex;align-items:center;gap:12px;font-size:14px;color:var(--gray-700);padding:8px 4px;}
+.rank-list .rank-n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--gray-100);color:var(--navy);font-weight:800;font-size:11.5px;display:flex;align-items:center;justify-content:center;}
+
+/* quick jump nav */
+.quick-nav{display:flex;flex-wrap:wrap;gap:8px;margin:-8px 0 28px;}
+.quick-nav a{background:#fff;border:1px solid #e2e8f0;color:var(--gray-700);font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;transition:.15s ease;}
+.quick-nav a:hover{background:var(--blue);border-color:var(--blue);color:#fff;}
+
+/* data table toolbar (search / pagination) */
+.dt-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;}
+.dt-search{flex:1;min-width:220px;max-width:340px;padding:10px 14px;border:1.5px solid #e2e8f0;border-radius:8px;font-size:14px;font-family:inherit;}
+.dt-search:focus{outline:none;border-color:var(--blue);}
+.dt-count{font-size:13px;color:var(--gray-600);}
+.dt-scroll{max-height:560px;overflow-y:auto;}
+.dt-pagination{display:flex;justify-content:center;align-items:center;gap:6px;margin-top:16px;flex-wrap:wrap;}
+.dt-pagination button{background:#fff;border:1.5px solid #e2e8f0;color:var(--gray-700);font-weight:600;font-size:13px;padding:7px 13px;border-radius:7px;cursor:pointer;}
+.dt-pagination button:hover:not(:disabled){border-color:var(--blue);color:var(--blue);}
+.dt-pagination button.active{background:var(--blue);border-color:var(--blue);color:#fff;}
+.dt-pagination button:disabled{opacity:.4;cursor:not-allowed;}
 .info-cta{background:linear-gradient(135deg,var(--navy-dark),var(--navy));color:#fff;border-radius:var(--radius);padding:32px;text-align:center;}
 .info-cta h3{color:#fff;margin-bottom:8px;}
 .info-cta p{color:#c7d2e3;font-size:14.5px;margin-bottom:18px;max-width:520px;margin-left:auto;margin-right:auto;}
