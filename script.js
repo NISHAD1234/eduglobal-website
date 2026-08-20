@@ -98,6 +98,18 @@ navLinks.querySelectorAll('a').forEach(function(a){
   });
 });
 
+// ── Basic inspect/right-click deterrent (cosmetic only — does not stop
+// technical visitors; view-source, disabling JS, or a proxy all bypass it) ──
+document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+document.addEventListener('keydown', function (e) {
+  var k = e.key;
+  var blocked =
+    k === 'F12' ||
+    (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].indexOf(k) !== -1) ||
+    (e.ctrlKey && ['U', 'u', 'S', 's'].indexOf(k) !== -1);
+  if (blocked) e.preventDefault();
+});
+
 var serviceTabs = document.getElementById('serviceTabs');
 if (serviceTabs) {
   serviceTabs.querySelectorAll('.service-tab').forEach(function(tab){

@@ -16,7 +16,8 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--gray-700);line-height:1.6;background:var(--white);}
+body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--gray-700);line-height:1.6;background:var(--white);-webkit-user-select:none;-moz-user-select:none;user-select:none;}
+input,textarea,select{-webkit-user-select:text;-moz-user-select:text;user-select:text;}
 img{max-width:100%;display:block;}
 a{text-decoration:none;color:inherit;}
 ul{list-style:none;}
