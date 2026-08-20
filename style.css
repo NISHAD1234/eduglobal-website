@@ -286,6 +286,18 @@ footer a{color:#c7d2e3;font-weight:600;}
 .dt-pagination button:hover:not(:disabled){border-color:var(--blue);color:var(--blue);}
 .dt-pagination button.active{background:var(--blue);border-color:var(--blue);color:#fff;}
 .dt-pagination button:disabled{opacity:.4;cursor:not-allowed;}
+
+/* year-tab data tables (e.g. FMGE % by year) */
+.year-tab-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.year-tab{background:#fff;border:1.5px solid #e2e8f0;padding:7px 15px;border-radius:8px;font-weight:700;font-size:13px;color:var(--gray-700);cursor:pointer;font-family:inherit;transition:.15s ease;}
+.year-tab:hover{border-color:var(--blue);color:var(--blue);}
+.year-tab.active{background:var(--blue);border-color:var(--blue);color:#fff;}
+
+.sub-heading{font-size:15.5px;color:var(--navy);font-weight:700;margin:22px 0 10px;}
+.sub-heading:first-child{margin-top:0;}
+.stat-mini-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;}
+.stat-mini{background:var(--gray-50);border:1px solid #eef2f7;border-radius:8px;padding:10px 16px;font-size:13px;color:var(--gray-700);}
+.stat-mini b{color:var(--navy);}
 .info-cta{background:linear-gradient(135deg,var(--navy-dark),var(--navy));color:#fff;border-radius:var(--radius);padding:32px;text-align:center;}
 .info-cta h3{color:#fff;margin-bottom:8px;}
 .info-cta p{color:#c7d2e3;font-size:14.5px;margin-bottom:18px;max-width:520px;margin-left:auto;margin-right:auto;}
