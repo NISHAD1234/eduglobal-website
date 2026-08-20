@@ -97,3 +97,16 @@ navLinks.querySelectorAll('a').forEach(function(a){
     if(window.innerWidth <= 700){ navLinks.style.display = 'none'; }
   });
 });
+
+var serviceTabs = document.getElementById('serviceTabs');
+if (serviceTabs) {
+  serviceTabs.querySelectorAll('.service-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      serviceTabs.querySelectorAll('.service-tab').forEach(function(t){ t.classList.remove('active'); });
+      document.querySelectorAll('.service-panel').forEach(function(p){ p.classList.remove('active'); });
+      tab.classList.add('active');
+      var panel = document.querySelector('.service-panel[data-panel="' + tab.getAttribute('data-tab') + '"]');
+      if (panel) panel.classList.add('active');
+    });
+  });
+}
