@@ -190,6 +190,10 @@ header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);backd
 .branch-badge{background:rgba(212,160,23,.12);color:#92650e;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;text-transform:uppercase;letter-spacing:.03em;}
 .branch-addr{font-size:13.5px;color:var(--gray-600);line-height:1.55;}
 .branch-state{font-size:12.5px;color:var(--blue);font-weight:600;margin-top:8px;}
+.branch-contacts{margin-top:12px;padding-top:12px;border-top:1px solid #eef2f7;display:flex;flex-direction:column;gap:6px;}
+.branch-contact{font-size:13px;color:var(--gray-700);}
+.branch-contact b{color:var(--navy);font-weight:700;}
+.branch-contact a{color:var(--blue);font-weight:600;}
 
 /* MEDIA */
 .media{background:var(--gray-50);}
